@@ -1,0 +1,258 @@
+/* css for index.html */
+body{
+  padding: 0;
+}
+.heading {
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+  background-color: #516395;
+  color: #C1E1A6;
+  border-radius: 5px;
+}
+
+.bodybackground {
+  background-color: #DFE2DB;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+.eventHeader {
+  margin: auto;
+  width: 100%;
+  color: #4A96AD;
+  padding: 10px;
+}
+
+.btnnav {
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 2px;
+  margin: 5px;
+  cursor: pointer;
+  display: block;
+  color: white;
+}
+
+.listnav {
+  display: inline;
+  float: right;
+}
+
+.churchimg {
+  width: 100%;
+}
+
+.navbarcolor{
+  background-color: #4A96AD;
+  color: white;
+}
+
+.navbar-brand {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-nav.navbar-right .btn {
+  position: relative;
+  z-index: 2;
+  padding: 4px 20px;
+  margin: 10px auto;
+}
+
+.navbar .navbar-collapse {
+  position: relative;
+}
+
+.navbar .navbar-collapse .navbar-right> li:last-child {
+  padding-left: 22px;
+}
+
+.navbar .nav-collapse {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding-right: 120px;
+  padding-left: 80px;
+  width: 100%;
+}
+
+.navbar.navbar-default .nav-collapse {
+  background-color: #f8f8f8;
+}
+
+.navbar.navbar-inverse .nav-collapse {
+  background-color: #222;
+}
+
+.navbar .nav-collapse .navbar-form {
+  border-width: 0;
+  box-shadow: none;
+}
+
+.nav-collapse>li {
+  float: right;
+}
+
+.btn.btn-circle {
+  border-radius: 50px;
+}
+
+.btn.btn-outline {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar .navbar-collapse .navbar-right> li:last-child {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar .nav-collapse {
+    margin: 7.5px auto;
+    padding: 0;
+  }
+  .navbar .nav-collapse .navbar-form {
+    margin: 0;
+  }
+  .nav-collapse>li {
+    float: none;
+  }
+}
+.footer{
+  
+  margin: auto;
+  width: 100%;
+  background-color: #516395;
+  color: #C1E1A6;
+  border-radius: 5px;
+}
+
+/* css for home.html  */
+
+.homeheading {
+  color: #4A96AD;
+}
+
+.emailBox {
+  width: 25%;
+  height: 25px;
+  text-align: center;
+  margin: 2px auto;
+  
+}
+
+.emailcontainer {
+  text-align: center;
+}
+
+.emailheader {
+  color: #4A96AD;
+  text-align: center;
+}
+
+.emailbtn {
+  background-color: #516395;
+  border: 2px solid silver;
+  margin: 2px auto;
+}
+
+.signupbtn {
+  background-color: #516395;
+  border: 2px solid silver;
+}
+
+
+/* css for events */
+
+.commentbox {
+  width: 75%;
+  height: 50px;
+  font-size: 16px;
+  border: 1px solid #516395;
+  margin: auto;
+}
+
+.newevent {
+  width: 75%;
+  background-color: white;
+  color: #16222A;
+  border: 1px solid #516395;
+  margin: 2px auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.eventcomment {
+  font-size: 24px;
+  color: #4A96AD;
+  display: inline;
+  float: right;
+}
+
+.commentbtn {
+  padding-top: 10px;
+  margin-top: 10px;
+  background-color: #516395;
+  border: 2px solid silver;
+  text-align: center;
+}
+
+.commentcontainer {
+  text-align: center
+}
+
+.newComment {
+  width: 50%;
+  background-color: white;
+  color: #16222A;
+  border: 1px solid #516395;
+  margin: 2px auto;
+  border-radius: 5px;
+}
+
+.commentthread {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.signup {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: 1px solid #516395;
+  width: 50%;
+  border-radius: 5px;
+  margin: 2px auto;
+}
+
+
+/* css for contact info */
+
+.contactinfo {
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #4A96AD;
+}
+
+
+/* css for about page */
+
+
+.aboutHeading {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #4A96AD;
+}
+
+.aboutus{
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #4A96AD;
+}
