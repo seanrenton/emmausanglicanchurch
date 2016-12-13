@@ -55,7 +55,11 @@ body{
 }
 
 .navbarcolor{
-  background-color: #93cede;
+  background: #DFE2DB;
+  background: -webkit-linear-gradient(left, #93cede, #49a5bf); 
+  background: -o-linear-gradient(right, #93cede, #49a5bf); 
+  background: -moz-linear-gradient(right, #93cede, #49a5bf); 
+  background: linear-gradient(to right, #93cede , #49a5bf); 
   color: white;
 }
 
