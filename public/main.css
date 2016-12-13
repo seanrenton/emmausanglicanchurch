@@ -2,6 +2,14 @@
 body{
   padding: 0;
 }
+.linkcolor{
+  text-decoration: none;
+  color: #D6EBFF;
+}
+.linkcolor:hover{
+  text-decoration: none;
+  color: #000000;
+}
 .heading {
   padding: 10px;
   margin: auto;
