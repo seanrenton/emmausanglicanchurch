@@ -7,7 +7,7 @@ body{
   margin: auto;
   width: 100%;
   background-color: #516395;
-  color: #C1E1A6;
+  color: #4F617F;
   border-radius: 5px;
 }
 
@@ -27,7 +27,7 @@ body{
 .eventHeader {
   margin: auto;
   width: 100%;
-  color: #4A96AD;
+  color: #4F617F;
   padding: 10px;
 }
 
@@ -141,7 +141,7 @@ body{
 /* css for home.html  */
 
 .homeheading {
-  color: #4A96AD;
+  color: #4F617F;
 }
 
 .emailBox {
@@ -157,7 +157,7 @@ body{
 }
 
 .emailheader {
-  color: #4A96AD;
+  color: #4F617F;
   text-align: center;
 }
 
@@ -195,7 +195,7 @@ body{
 
 .eventcomment {
   font-size: 24px;
-  color: #4A96AD;
+  color: #4F617F;
   display: inline;
   float: right;
 }
@@ -242,7 +242,7 @@ body{
 .contactinfo {
   font-size: 24px;
   font-family: sans-serif;
-  color: #4A96AD;
+  color: #4F617F;
 }
 
 
@@ -252,11 +252,11 @@ body{
 .aboutHeading {
   font-size: 30px;
   font-family: sans-serif;
-  color: #4A96AD;
+  color: #4F617F;
 }
 
 .aboutus{
   font-size: 24px;
   font-family: sans-serif;
-  color: #4A96AD;
+  color: #4F617F;
 }
