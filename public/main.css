@@ -2,14 +2,7 @@
 body{
   padding: 0;
 }
-.linkcolor{
-  text-decoration: none;
-  color: #D6EBFF;
-}
-.linkcolor:hover{
-  text-decoration: none;
-  color: #000000;
-}
+
 .heading {
   padding: 10px;
   margin: auto;
@@ -59,7 +52,7 @@ body{
 }
 
 .navbarcolor{
-  background-color: #4A96AD;
+  background-color: #93cede;
   color: white;
 }
 
