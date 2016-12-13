@@ -2,6 +2,9 @@
 body{
   padding: 0;
 }
+.linkcolor{
+  color: #D6EBFF !important;
+}
 
 .heading {
   padding: 10px;
