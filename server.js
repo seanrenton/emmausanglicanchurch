@@ -1,7 +1,9 @@
-var express = require('express'); 
-var port = process.env.PORT || 3000;
-
-var app = express(); 
+var express = require('express'), 
+    mongoose = require('mongoose'),
+    bodyParser = require('body-parser'),
+    morgan = require('morgan'),
+    port = process.env.PORT || 3000,
+    app = express(); 
 
 app.use( express.static('public') ); 
 

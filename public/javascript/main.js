@@ -14,7 +14,7 @@ var newEmail = [];
 function Router($routeProvider){
   
   $routeProvider
-      .when('/home', {
+      .when('/html/home', {
     templateUrl: '/home.html',
     
     controller: 'emmausController',
@@ -22,21 +22,28 @@ function Router($routeProvider){
     controllerAs: 'eCtrl'
   })
     .when('/events', {
-    templateUrl: '/events.html',
+    templateUrl: '/html/events.html',
     
     controller: 'emmausController',
     
     controllerAs: 'eCtrl'
   })
   .when('/contact', {
-    templateUrl: '/contact.html',
+    templateUrl: '/html/contact.html',
     
     controller: 'emmausController',
     
     controllerAs: 'eCtrl'
   })
   .when('/about', {
-    templateUrl: '/about.html',
+    templateUrl: '/html/about.html',
+    
+    controller: 'emmausController',
+    
+    controllerAs: 'eCtrl'
+  })
+  .when('/signup', {
+    templateUrl: '/html/signup.html',
     
     controller: 'emmausController',
     
