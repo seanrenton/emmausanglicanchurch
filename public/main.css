@@ -10,7 +10,7 @@ body{
   padding: 10px;
   margin: auto;
   width: 100%;
-  background-color: #516395;
+  background-color: transparent;
   color: #D6EBFF;
   border-radius: 5px;
 }
@@ -268,3 +268,53 @@ body{
   font-family: sans-serif;
   color: #4F617F;
 }
+
+/* css for sign up page */
+
+.center {
+    margin:50px auto;   
+}
+
+.modal-header {
+	padding-bottom: 5px;
+}
+
+.modal-footer {
+    	padding: 0;
+	}
+    
+.modal-footer .btn-group button {
+	height: 40px;
+	border-top-left-radius : 0;
+	border-top-right-radius : 0;
+	border: none;
+	border-right: 1px solid #ddd;
+}
+	
+.modal-footer .btn-group:last-child > button {
+	border-right: 0;
+}
+
+.btnsize{
+  height: 200px;
+  width: 300px;
+  font-size: 30px;
+  background-color: #516395;
+  border: 2px solid silver;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

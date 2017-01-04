@@ -42,6 +42,13 @@ function Router($routeProvider){
     
     controllerAs: 'eCtrl'
   })
+  .when('/signup', {
+    templateUrl: '/signup.html',
+    
+    controller: 'emmausController',
+    
+    controllerAs: 'eCtrl'
+  })
 }
 
 angular.module('Emmaus')
