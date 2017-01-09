@@ -4,7 +4,15 @@ var express = require('express'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     Routes = require('./routes'),
-    PORT = process.env.PORT || 3000;
+    PORT = process.env.PORT || 3000,
+    sessions = require('client-sessions')({
+      cookieName : 'user',
+      secret : '',
+      requestKey : 'session',
+      cookie : {
+        httpOnly : true
+      }
+    })
 
 mongoose.connect('mongodb://localhost/EmmausAnglican');
 
