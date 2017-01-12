@@ -26,7 +26,12 @@ app.use(
 express.static('public'),
 morgan,
 bodyParser.json(),
-bodyParser.urlencoded({extended : true}));
+bodyParser.urlencoded({extended : true}),
+(req, res, next)=>{
+  console.log(`SESSION : `, 
+  `${req.session.uid}`);
+  next()
+});
 
 // Routes
 
