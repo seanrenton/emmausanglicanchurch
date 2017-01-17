@@ -15,8 +15,8 @@ function ngRouter ($routeProvider, $locationProvider) {
   })
   .when('/events', {
     templateUrl : '/html/events.html',
-    controller : 'userCtrl',
-    controllerAs : 'user'
+    controller : 'eventsCtrl',
+    controllerAs : 'events'
   })
   .when('/about', {
     templateUrl : '/html/about.html',
@@ -32,6 +32,11 @@ function ngRouter ($routeProvider, $locationProvider) {
     templateUrl : '/html/signup.html',
     controller : 'userCtrl',
     controllerAs : 'user'
+  })
+  .when('/search', {
+    templateUrl : '/html/search.html',
+    controller : 'searchCtrl',
+    controllerAs : 'search'
   })
       
 }

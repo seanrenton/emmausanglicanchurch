@@ -2,17 +2,20 @@ var express = require('express'),
     mongoose = require('mongoose'),
     io = require('socket.io'),
     morgan = require('morgan'),
+    secretKey = require('./config')
     bodyParser = require('body-parser'),
     Routes = require('./routes'),
     PORT = process.env.PORT || 3000,
     sessions = require('client-sessions')({
       cookieName : 'user',
-      secret : '',
+      secret : 'secretKey',
       requestKey : 'session',
       cookie : {
         httpOnly : true
       }
     })
+
+
 
 mongoose.connect('mongodb://localhost/EmmausAnglican');
 
