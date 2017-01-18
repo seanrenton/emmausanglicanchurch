@@ -2,7 +2,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     io = require('socket.io'),
     morgan = require('morgan'),
-    secretKey = require('./config')
+    secretKey = require('./config'),
     bodyParser = require('body-parser'),
     Routes = require('./routes'),
     PORT = process.env.PORT || 3000,
@@ -17,7 +17,7 @@ var express = require('express'),
 
 
 
-mongoose.connect('mongodb://localhost/EmmausAnglican');
+mongoose.connect('mongodb://localhost/emmaus');
 
 
 var app = express();

@@ -1,4 +1,5 @@
-var User = require('../models/users');
+var User = require('../models/users'),
+    bcrypt = require('bcryptjs');
 
 module.exports = {
   
@@ -39,6 +40,29 @@ module.exports = {
         }
           res.send(users);
       });
+    }
+  },
+  login : (req, res)=>{
+    if(req.params.id){
+      User.findOne({email : req.body.email.toLowerCase()}, (err, user)=>{
+        if(err){
+          return res.send(err)
+        }
+        if(!user){
+          return res.send('No user email found!')
+        }
+        bcrypt.compare(req.body.password, user.password, (err, matched)=>{
+          if(err){
+            return res.send(err)
+          }
+          if(!matched){
+            res.send('Invalid password')
+          }
+          req.session.userID = user._id
+
+          res.send(user);
+        })
+      })
     }
   }
 

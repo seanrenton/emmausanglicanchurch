@@ -10,6 +10,16 @@ angular.module("Emmaus")
         var search = this;
 
         search.Auth = Auth;
+        Auth.checkAuth()
+            .then(function(returnData){
+                console.log(returnData)
+
+                if(!returnData.data){
+                    $location.url('/signup');
+                }else{
+                    Auth.user = returnData.data
+                }
+            })
 
 
 
