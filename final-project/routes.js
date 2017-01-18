@@ -10,7 +10,7 @@ module.exports = (app)=>{
   });
 
   app.get('/api/me', (req, res)=>{
-    User.findOne({_id : req.session.userID}, (err, user)=>{
+    User.findOne({_id : req.session.uid}, (err, user)=>{
       res.send(user)
     })
   })

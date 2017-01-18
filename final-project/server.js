@@ -1,7 +1,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     io = require('socket.io'),
-    morgan = require('morgan'),
+    morgan = require('morgan')('dev'),
     secretKey = require('./config'),
     bodyParser = require('body-parser'),
     Routes = require('./routes'),
@@ -13,7 +13,7 @@ var express = require('express'),
       cookie : {
         httpOnly : true
       }
-    })
+    });
 
 
 
@@ -30,11 +30,8 @@ express.static('public'),
 morgan,
 bodyParser.json(),
 bodyParser.urlencoded({extended : true}),
-(req, res, next)=>{
-  console.log(`SESSION : `, 
-  `${req.session.uid}`);
-  next()
-});
+sessions
+);
 
 // Routes
 

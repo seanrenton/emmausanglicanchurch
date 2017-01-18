@@ -1,18 +1,55 @@
 <form ng-submit="user.signup()">
 
-<input class="form-control" ng-model="user.signupUser.firstname"type="text" placeholder="First Name">
-<input class="form-control" ng-model="user.signupUser.lastname"type="text" placeholder="Last Name">
-<input class="form-control" ng-model="user.signupUser.email"type="text" placeholder="Email">
-<input class="form-control" ng-model="user.signupUser.phone"type="text" placeholder="Phone Number">
-<input class="form-control" ng-model="user.signupUser.address"type="text" placeholder="Address">
-<input class="form-control" ng-model="user.signupUser.password"type="text" placeholder="Password">
+    <h1 class='logColors'>Sign Up</h1>
+    <div class="container">
 
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6">
+
+                <input class="form-control text-center inline-form" ng-model="user.signupUser.firstname" type="text" placeholder="First Name">
+
+                <input class="form-control text-center inline-form" ng-model="user.signupUser.lastname" type="text" placeholder="Last Name">
+
+                <input class="form-control text-center inline-form" ng-model="user.signupUser.phone" type="text" placeholder="Phone Number">
+
+                <input class="form-control text-center inline-form" ng-model="user.signupUser.address" type="text" placeholder="Address">
+
+                <input class="form-control text-center inline-form" ng-model="user.signupUser.email" type="text" placeholder="Email">
+
+                <input class="form-control text-center inline-form" ng-model="user.signupUser.password" type="password" placeholder="Password">
+            </div>
+        </div>
+    </div>
+
+<br>
+<input type="Submit" class='btn btn-info'>
 </form>
 
+
+<br>
 
 <form ng-submit="home.login()">
 
-<input class="form-control" ng-model="user.loginUser.email"type="text" placeholder="Email">
-<input class="form-control" ng-model="user.loginUser.password"type="text" placeholder="Password">
+    <h1 class='logColors'>Login</h1>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6">
+
+                <input class="form-control text-center inline-form" ng-model="user.loginUser.email" type="text" placeholder="Email">
+
+                <input class="form-control text-center inline-form" ng-model="user.loginUser.password" type="password" placeholder="Password">
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <input type="Submit" class='btn btn-info'>
 
 </form>
+
+<br>

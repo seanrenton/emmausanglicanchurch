@@ -11,7 +11,7 @@ module.exports = {
       if(err){
         return res.send(err)
       }
-      
+      req.session.uid = user._id;
       res.send(user);
       
     })
@@ -58,7 +58,7 @@ module.exports = {
           if(!matched){
             res.send('Invalid password')
           }
-          req.session.userID = user._id
+          req.session.uid = user._id
 
           res.send(user);
         })

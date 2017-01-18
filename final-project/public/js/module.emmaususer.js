@@ -1,7 +1,7 @@
 angular.module('Emmaus', ['ngRoute'])
        .config(ngRouter)
 
-ngRouter.$inject = ['$routeProvider', 'locationProvider'];
+ngRouter.$inject = ['$routeProvider', '$locationProvider'];
 
 function ngRouter ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
@@ -28,7 +28,7 @@ function ngRouter ($routeProvider, $locationProvider) {
     controller : 'userCtrl',
     controllerAs : 'user'
   })
-  .when('/register', {
+  .when('/signup', {
     templateUrl : '/html/signup.html',
     controller : 'userCtrl',
     controllerAs : 'user'
@@ -38,5 +38,6 @@ function ngRouter ($routeProvider, $locationProvider) {
     controller : 'searchCtrl',
     controllerAs : 'search'
   })
+  
       
 }

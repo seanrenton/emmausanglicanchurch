@@ -2,7 +2,7 @@ angular.module("Emmaus")
     .controller('searchCtrl', searchCtrl)
 
 
-    seachCtrl.$inject = ['Auth', '$location', '$http'];
+    searchCtrl.$inject = ['Auth', '$location', '$http'];
 
 
 
