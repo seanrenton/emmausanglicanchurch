@@ -2,7 +2,7 @@ var User = require('./models/users')
 
 module.exports = {
     isLoggedIn : (req, res, next)=>{
-        if(req.session.userID){
+        if(req.session.uid){
             next()
         }else{
             res.status(403).send('Not found!');
@@ -10,7 +10,7 @@ module.exports = {
     },
 
     isAdmin : (req, res, next)=>{
-        User.findOne({_id : req.session.userID},
+        User.findOne({_id : req.session.uid},
         (err, user)=>{
             if(user && (user.role > 1)){
                 next()

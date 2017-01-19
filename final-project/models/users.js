@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+var bcrypt = require('bcryptjs');
+const SALTY_BITS = 10;
 
 
 
@@ -26,6 +28,31 @@ var User = mongoose.Schema({
   }]
 
 });
+
+User.pre('save', function(next){
+  var user = this;
+
+  if(!user.isModified('password')){
+    return next();
+  }
+  bcrypt.genSalt(SALTY_BITS, (saltErr, salt)=>{
+    if(saltErr){
+      return next(saltErr);
+    }
+    console.info('SALT generated!', salt);
+
+    bcrypt.hash(user.password, salt, (hashErr, hashedPassword)=>{
+      if(hashErr){
+        return next(hashErr);
+      }
+
+      user.password = hashedPassword;
+      next();
+    })
+  })
+})
+
+
 
 
 module.exports = mongoose.model('User', User);

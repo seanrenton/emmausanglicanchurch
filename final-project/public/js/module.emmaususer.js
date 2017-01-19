@@ -16,7 +16,7 @@ function ngRouter ($routeProvider, $locationProvider) {
   .when('/events', {
     templateUrl : '/html/events.html',
     controller : 'eventsCtrl',
-    controllerAs : 'events'
+    controllerAs : 'event'
   })
   .when('/about', {
     templateUrl : '/html/about.html',

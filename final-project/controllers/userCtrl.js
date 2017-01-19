@@ -43,7 +43,7 @@ module.exports = {
     }
   },
   login : (req, res)=>{
-    if(req.params.id){
+    
       User.findOne({email : req.body.email.toLowerCase()}, (err, user)=>{
         if(err){
           return res.send(err)
@@ -56,7 +56,7 @@ module.exports = {
             return res.send(err)
           }
           if(!matched){
-            res.send('Invalid password')
+            return res.send('Invalid password')
           }
           req.session.uid = user._id
 
@@ -64,6 +64,6 @@ module.exports = {
         })
       })
     }
-  }
+  
 
 }

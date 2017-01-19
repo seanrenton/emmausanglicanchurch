@@ -1,6 +1,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     io = require('socket.io'),
+    bcrypt = require('bcryptjs'),
     morgan = require('morgan')('dev'),
     secretKey = require('./config'),
     bodyParser = require('body-parser'),

@@ -1,5 +1,6 @@
 var Users = require('./controllers/userCtrl'),
     User = require('./models/users'),
+    Events = require('./controllers/eventCtrl'),
     Middleware = require('./middleware');
     
 
@@ -26,5 +27,8 @@ module.exports = (app)=>{
 
   app.post('/api/users/login', Users.login);
 
+  app.post('/api/events/post', Middleware.isLoggedIn, Events.create);
+
+  app.get('/api/events', Middleware.isLoggedIn, Events.get);
     
 }

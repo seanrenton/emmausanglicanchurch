@@ -1,12 +1,14 @@
 angular.module('Emmaus')
-    .controller('eventsCtrl', eventsCtrl)
+    .controller('eventsCtrl', eventsCtrl);
+    
 
-eventsCtrl.$inject = ['Auth', '$location']
+eventsCtrl.$inject = ['Auth', '$location', '$http', 'Events'];
 
 
-function eventsCtrl(Auth, $location) {
+function eventsCtrl(Auth, $location, $http, Events) {
     var event = this;
-
+    
+    console.log('eventsCtrl running', event)
     event.Auth = Auth;
 
     Auth.checkAuth()
@@ -18,22 +20,43 @@ function eventsCtrl(Auth, $location) {
             } else {
                 Auth.user = returnData.data
 
+                Events.get()
+                    .then(function(returnData){
+                        event.Events = returnData.data
+                    })
+
                 $location.url('/events');
             }
-        }
-        ),
+        })
 
+        event.eventPost = function(){
+            console.log('posting')
+            $http
+                .post('/api/events/post', event.postEvent)
+                .then(function(returnData){
+                    console.log('Event: ', returnData);
+                    if(returnData.data){
+                        eventpost = returnData.data
+                    }
+                })
+        }
+        event.eventGet = function(){
+            $http
+                .get('/api/events', event.getEvent)
+                .then(function(returnData){
+                    console.log('Events: ', returnData);
+                    if(returnData.data){
+                        event.Events = returnData.data
+                    }
+                })
+        }
+        
+        
+        
         event.newEvent = {};
         event.newVolunteer = {};
 
-    event.Events = [
-        {
-            name: '',
-            date: '',
-            time: ''
-        }
-    ];
-
+    
 
     event.addEvent = function () {
         console.log('Adding event');
@@ -43,14 +66,16 @@ function eventsCtrl(Auth, $location) {
 
     }
 
-    event.removeEvent = function () {
-        event.newEvent.pop(newEvent);
+    event.removeEvent = function (event) {
+        event.newEvent[event].splice(event, 1);
 
         event.newEvent = {};
     }
 
 
-    // event.signUp = function () {
-    //     event.
-    // }
+    event.signUp = function () {
+        
+    }
+
+    
 }

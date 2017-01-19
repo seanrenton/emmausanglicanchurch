@@ -1,7 +1,7 @@
 
 
 <div>
-  <h1 class="eventHeader col-xs-12 text-center">Sign Up For Events!</h1>
+  <h1 class="eventHeader col-xs-12 text-center" >Sign Up For Events!</h1>
 
 <div class="container">
   <div class="row">
@@ -18,30 +18,30 @@
             
             <div class="container">
             
-            <form class="inline-form">
+            <form class="inline-form"  ng-submit="event.eventPost()">
 
-              <input ng-model="event.newEvent.name" type="text" class="form-control commentbox" placeholder="Event: name">
+              <input ng-model="event.Event.name" type="text" class="form-control commentbox" placeholder="Event: name">
 
-              <input ng-model="event.newEvent.date" type="text" class="form-control commentbox" placeholder="Date: mm/dd/yyyy">
+              <input ng-model="event.Event.date" type="text" class="form-control commentbox" placeholder="Date: mm/dd/yyyy">
 
-              <input ng-model="event.newEvent.time" type="text" class="form-control commentbox" placeholder="Time: am/pm">
+              <input ng-model="event.Event.time" type="text" class="form-control commentbox" placeholder="Time: am/pm">
           <div class="container commentcontainer">
             <div></div>
-              <button ng-click="event.addEvent()" class="btn btn-info commentbtn">Add Event</button>
-               <button ng-click="event.removeEvent()" class="btn btn-info commentbtn">Remove Event</button>
+               <button type="Submit" class="btn btn-info commentbtn">Create Event</button>
+               <button type="Submit" ng-click="event.removeEvent()" class="btn btn-info commentbtn">Delete Event</button>
           </div>
             </form>
               
             <div ng-repeat="event in event.Events" class="newevent container text-center">
               <div class="row">
                 <p class="eventcomment col-xs-4 text-center">
-                  {{event.time}}
+                  {{event.name}}
                 </p>
                 <p class="eventcomment col-xs-4 text-center">
                   {{event.date}}
                 </p>
                 <p class="eventcomment col-xs-4 text-center">
-                  {{event.name}}
+                  {{event.time}}
                 </p>
                 
                                  
@@ -49,7 +49,7 @@
                   
                   <input type="text"  ng-model="event.Volunteer" class="form-control newComment text-center" placeholder="Sign up using full name!">
                   
-                <button ng-click="event.signUp(event)" class="btn btn-info commentbtn text-center">Sign Up!</button>
+                <button type="Submit" ng-click="event.signUp(event)" class="btn btn-info commentbtn text-center">Sign Up!</button>
                   <div ng-repeat="volunteer in event.signUp" class="text-center signup">
                     {{volunteer.event}}
                   </div> 
