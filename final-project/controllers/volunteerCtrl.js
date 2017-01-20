@@ -12,16 +12,5 @@ module.exports = {
                 res.send(regions);
             });
         }
-    },
-
-    create: (req, res) => {
-        var newVolunteer = new Volunteer(req.body);
-
-        newVolunteer.save((err, volunteer) => {
-            if (err) {
-                return res.send(err)
-            }
-            res.send(volunteer);
-        });
     }
-}
+

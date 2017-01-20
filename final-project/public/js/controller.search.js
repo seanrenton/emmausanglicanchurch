@@ -23,13 +23,15 @@ angular.module("Emmaus")
 
 
 
-        search.searchUsers = function(){
+        search.getUsers = function(){
             $http({
                 method : 'GET',
-                url : '/api/search'
+                url : '/api/users'
             }).then(function(response){
                 search.users = response.data;
             });
         }
-        search.searchUsers();
+        search.getUsers();
     }
+
+        

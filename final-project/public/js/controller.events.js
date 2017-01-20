@@ -24,8 +24,6 @@ function eventsCtrl(Auth, $location, $http, Events) {
                     .then(function(returnData){
                         event.Events = returnData.data
                     })
-
-                $location.url('/events');
             }
         })
 
@@ -37,6 +35,8 @@ function eventsCtrl(Auth, $location, $http, Events) {
                     console.log('Event: ', returnData);
                     if(returnData.data){
                         eventpost = returnData.data
+
+                        event.eventGet();
                     }
                 })
         }

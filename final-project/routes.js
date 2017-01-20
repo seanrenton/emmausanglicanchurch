@@ -31,4 +31,5 @@ module.exports = (app)=>{
 
   app.get('/api/events', Middleware.isLoggedIn, Events.get);
     
+  app.get('/api/search', Middleware.isLoggedIn, Middleware.isAdmin, Users.get)
 }

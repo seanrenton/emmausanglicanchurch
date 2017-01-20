@@ -1,9 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-4">
-            <form ng-submit="">
-                <input class="form-control" ng-model="search.searchUsers.name" type="search" placeholder="Search Users">
-            </form>
+        <div class="col-xs-12">
+            <ul ng-repeat="user in search.users">
+                <li>Name: {{user.firstname}} {{user.lastname}} <br>
+                    Phone #: {{user.phone}} <br>
+                    Address: {{user.address}} <br>
+                    Email: {{user.email}} <br><br>
+                </li>
+
+
+            </ul>
         </div>
     </div>
 </div>

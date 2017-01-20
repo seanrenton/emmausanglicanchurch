@@ -20,11 +20,11 @@
             
             <form class="inline-form"  ng-submit="event.eventPost()">
 
-              <input ng-model="event.Event.name" type="text" class="form-control commentbox" placeholder="Event: name">
+              <input ng-model="event.postEvent.name" type="text" class="form-control commentbox" placeholder="Event: name">
 
-              <input ng-model="event.Event.date" type="text" class="form-control commentbox" placeholder="Date: mm/dd/yyyy">
+              <input ng-model="event.postEvent.date" type="text" class="form-control commentbox" placeholder="Date: mm/dd/yyyy">
 
-              <input ng-model="event.Event.time" type="text" class="form-control commentbox" placeholder="Time: am/pm">
+              <input ng-model="event.postEvent.time" type="text" class="form-control commentbox" placeholder="Time: am/pm">
           <div class="container commentcontainer">
             <div></div>
                <button type="Submit" class="btn btn-info commentbtn">Create Event</button>
@@ -34,20 +34,20 @@
               
             <div ng-repeat="event in event.Events" class="newevent container text-center">
               <div class="row">
-                <p class="eventcomment col-xs-4 text-center">
-                  {{event.name}}
+                <p class="eventpost col-xs-4 text-center">
+                  {{event.time}}
                 </p>
-                <p class="eventcomment col-xs-4 text-center">
+                <p class="eventpost col-xs-4 text-center">
                   {{event.date}}
                 </p>
-                <p class="eventcomment col-xs-4 text-center">
-                  {{event.time}}
+                <p class="eventpost col-xs-4 text-center">
+                  {{event.name}}
                 </p>
                 
                                  
 
                   
-                  <input type="text"  ng-model="event.Volunteer" class="form-control newComment text-center" placeholder="Sign up using full name!">
+                  
                   
                 <button type="Submit" ng-click="event.signUp(event)" class="btn btn-info commentbtn text-center">Sign Up!</button>
                   <div ng-repeat="volunteer in event.signUp" class="text-center signup">

@@ -190,10 +190,16 @@ body{
   border: 1px solid #516395;
   margin: auto;
 }
+.eventpost{
+  color: #D6EBFF;
+  background-color: #4F617F;
+  display: inline;
+  float: right;
+}
 
 .newevent {
   width: 75%;
-  background-color: white;
+  background-color: #4F617F;
   color: #16222A;
   border: 1px solid #516395;
   margin: 2px auto;
@@ -209,8 +215,8 @@ body{
 }
 
 .commentbtn {
-  padding-top: 10px;
-  margin-top: 10px;
+  /*padding-top: 10px;
+  margin-top: 10px;*/
   background-color: #516395;
   border: 2px solid silver;
   text-align: center;
@@ -222,8 +228,8 @@ body{
 
 .newComment {
   width: 50%;
-  background-color: white;
-  color: #16222A;
+  background-color: #4F617F;
+  color: #D6EBFF;
   border: 1px solid #516395;
   margin: 2px auto;
   border-radius: 5px;
@@ -236,7 +242,7 @@ body{
 
 .signup {
   font-size: 16px;
-  background-color: white;
+  background-color: #4F617F;
   color: black;
   border: 1px solid #516395;
   width: 50%;
