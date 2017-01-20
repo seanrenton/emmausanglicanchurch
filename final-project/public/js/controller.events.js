@@ -42,7 +42,7 @@ function eventsCtrl(Auth, $location, $http, Events) {
         }
         event.eventGet = function(){
             $http
-                .get('/api/events', event.getEvent)
+                .get('/api/events')
                 .then(function(returnData){
                     console.log('Events: ', returnData);
                     if(returnData.data){
@@ -57,33 +57,36 @@ function eventsCtrl(Auth, $location, $http, Events) {
             $http
                 .post('/api/events/' + eventItem._id, eventItem)    
                 .then(function(returnData){
+                    
                     console.log('Signed Up: ', returnData);
                     if(returnData.data){
                      console.log(returnData.data)
                     }
+                    event.eventGet();
+                    event.signUp();
                 })
         }
         
         
         
-        event.newEvent = {};
-        event.newVolunteer = {};
+    //     event.newEvent = {};
+    //     event.newVolunteer = {};
 
     
 
-    event.addEvent = function () {
-        console.log('Adding event');
-        event.Events.push(event.newEvent);
+    // event.addEvent = function () {
+    //     console.log('Adding event');
+    //     event.Events.push(event.newEvent);
 
-        event.newEvent = {};
+    //     event.newEvent = {};
 
-    }
+    // }
 
-    event.removeEvent = function (event) {
-        event.newEvent[event].splice(event, 1);
+    // event.removeEvent = function (event) {
+    //     event.newEvent[event].splice(event, 1);
 
-        event.newEvent = {};
-    }
+    //     event.newEvent = {};
+    // }
 
 
     

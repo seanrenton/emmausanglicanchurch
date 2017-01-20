@@ -16,7 +16,7 @@ module.exports = (app)=>{
     })
   })
 
-  app.post('/api/events/:id', Events.update)
+  
 
   app.get('/logout', (req, res)=>{
     req.session.reset();
@@ -31,6 +31,8 @@ module.exports = (app)=>{
   app.post('/api/users/login', Users.login);
 
   app.post('/api/events/post', Middleware.isLoggedIn, Events.create);
+
+  app.post('/api/events/:id', Events.update)
 
   app.get('/api/events', Middleware.isLoggedIn, Events.get);
     

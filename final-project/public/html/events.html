@@ -1,67 +1,76 @@
-
-
 <div>
-  <h1 class="eventHeader col-xs-12 text-center" >Sign Up For Events!</h1>
+  <h1 class="eventHeader col-xs-12 text-center">Sign Up For Events!</h1>
 
-<div class="container">
-  <div class="row">
+  <div class="container">
+    <div class="row">
 
-   
 
-    <div>
 
-      <div class="container">
+      <div>
 
-        <div class="row">
+        <div class="container">
 
-          <div class="col-xs-12">
-            
-            <div class="container">
-            
-            <form class="inline-form"  ng-submit="event.eventPost()">
+          <div class="row">
 
-              <input ng-model="event.postEvent.name" type="text" class="form-control commentbox" placeholder="Event: name">
+            <div class="col-xs-12">
 
-              <input ng-model="event.postEvent.date" type="text" class="form-control commentbox" placeholder="Date: mm/dd/yyyy">
+              <div class="container">
 
-              <input ng-model="event.postEvent.time" type="text" class="form-control commentbox" placeholder="Time: am/pm">
-          <div class="container commentcontainer">
-            <div></div>
-               <button type="Submit" class="btn btn-info commentbtn">Create Event</button>
-               <button type="Submit" ng-click="event.removeEvent()" class="btn btn-info commentbtn">Delete Event</button>
-          </div>
-            </form>
-              
-            <div ng-repeat="eventItem in event.Events" class="newevent container text-center">
-              <div class="row">
-                <p class="eventpost col-xs-4 text-center">
-                  {{eventItem.time}}
-                </p>
-                <p class="eventpost col-xs-4 text-center">
-                  {{eventItem.date}}
-                </p>
-                <p class="eventpost col-xs-4 text-center">
-                  {{eventItem.name}}
-                </p>
-                
-                                 
+                <form class="inline-form" ng-submit="event.eventPost()">
 
-                  
-                  
-                  
-                <button type="button" ng-click="event.signUp(eventItem)" class="btn btn-info commentbtn text-center">Sign Up!</button>
-                  <!--<div ng-repeat="volunteer in event.signUp" class="text-center signup">-->
-                    {{event.Me.firstname}}{{event.Me.lastname}}
-                  <!--</div> -->
+                  <input ng-model="event.postEvent.name" type="text" class="form-control commentbox" placeholder="Event: name">
+
+                  <input ng-model="event.postEvent.date" type="text" class="form-control commentbox" placeholder="Date: mm/dd/yyyy">
+
+                  <input ng-model="event.postEvent.time" type="text" class="form-control commentbox" placeholder="Time: am/pm">
+                  <div class="commentcontainer pad">
+                    <div></div>
+                    <button type="Submit" class="btn btn-info commentbtn">Create Event</button>
+                    <!--<button type="Submit" ng-click="event.removeEvent()" class="btn btn-info commentbtn">Delete Event</button>-->
                   </div>
+                </form>
+
+                <div ng-repeat="eventItem in event.Events" class="newevent container text-center pad">
+                  <div class="row">
+                    <p class="eventpost col-xs-4 text-center">
+                     <u>TIME</u> 
+                     <br>
+                     {{eventItem.time}}
+                    </p>
+                    <p class="eventpost col-xs-4 text-center">
+                     <u>DATE</u> 
+                     <br>
+                     {{eventItem.date}}
+                    </p>
+                    <p class="eventpost col-xs-4 text-center">
+                     <u>NAME</u>
+                     <br>
+                     {{eventItem.name}}
+                    </p>
+
+
+
+
+
+                    <br>
+                    <button type="button" ng-click="event.signUp(eventItem)" class="btn btn-info commentbtn">Sign Up!</button>
+                    
+                    <!--<div ng-repeat="volunteer in event.signUp" class="text-center signup">-->
+                    <ul class="pad" ng-repeat="volunteer in eventItem.volunteers">
+                      <li class="volunteerStyle">Volunteer: {{volunteer.firstname}} {{volunteer.lastname}}</li>
+                      
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
         </div>
-        
-        
-        </div>
-       
+
 
       </div>
+
+
+    </div>
+    <br> 

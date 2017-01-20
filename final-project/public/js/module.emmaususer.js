@@ -38,6 +38,11 @@ function ngRouter ($routeProvider, $locationProvider) {
     controller : 'searchCtrl',
     controllerAs : 'search'
   })
+  .when('/donate', {
+    templateUrl : '/html/donate.html',
+    controller : 'userCtrl',
+    controllerAs : 'user'
+  })
   
       
 }

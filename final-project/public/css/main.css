@@ -219,7 +219,7 @@ body{
   margin-top: 10px;*/
   background-color: #516395;
   border: 2px solid silver;
-  text-align: center;
+  
 }
 
 .commentcontainer {
@@ -248,6 +248,11 @@ body{
   width: 50%;
   border-radius: 5px;
   margin: 2px auto;
+}
+
+.volunteerStyle {
+  color: #D6EBFF;
+  text-align: left;
 }
 
 
@@ -310,12 +315,31 @@ body{
   text-align: center;
 }
 
-/*css for Sign up page*/
-
 .logColors{
   color: #4F617F;
 }
 
+/*css for donate page*/
+
+.payBtn {
+  font-size: 50px;
+  
+}
+
+/*css for search page*/
+
+.searchList {
+  color: #D6EBFF;
+  font-size: 20px;
+}
+
+
+/*Quick css classes*/
+
+
+.pad {
+  padding-top: 5px;
+}
 
 
 

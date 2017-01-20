@@ -20,7 +20,7 @@ var User = mongoose.Schema({
 
   address: {type : String, required : true},
   
-  role: {type : Number, default : 0},
+  admin: {type : Boolean, default : false},
 
   volunteer: [{
     type: mongoose.Schema.ObjectId,

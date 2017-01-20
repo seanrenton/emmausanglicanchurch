@@ -12,7 +12,7 @@ module.exports = {
     isAdmin : (req, res, next)=>{
         User.findOne({_id : req.session.uid},
         (err, user)=>{
-            if(user && (user.role > 1)){
+            if(user && (user.admin === true)){
                 next()
             }else{
                 res.status(403).send('Not found!');
