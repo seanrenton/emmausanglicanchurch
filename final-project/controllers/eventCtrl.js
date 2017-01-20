@@ -19,5 +19,13 @@ module.exports = {
             }
             res.send(events);
         })
-}
+},
+    update : (req, res)=>{
+        Event.update({_id: req.params.id}, req.body, (err, update)=>{
+           if(err){
+           return res.send(err)
+           }
+           res.send(update)
+        })
+    }
 }

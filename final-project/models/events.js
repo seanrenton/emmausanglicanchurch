@@ -6,7 +6,9 @@ var eventSchema = mongoose.Schema({
 
     date : {type : String, required : true},
 
-    time : {type : String, required : true}
+    time : {type : String, required : true},
+
+    volunteers : [{type : mongoose.Schema.ObjectId, ref : "User"}]
 })
 
 module.exports = mongoose.model('Events', eventSchema);

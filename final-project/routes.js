@@ -15,6 +15,9 @@ module.exports = (app)=>{
       res.send(user)
     })
   })
+
+  app.post('/api/events/:id', Events.update)
+
   app.get('/logout', (req, res)=>{
     req.session.reset();
 

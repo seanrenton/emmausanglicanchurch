@@ -32,16 +32,16 @@
           </div>
             </form>
               
-            <div ng-repeat="event in event.Events" class="newevent container text-center">
+            <div ng-repeat="eventItem in event.Events" class="newevent container text-center">
               <div class="row">
                 <p class="eventpost col-xs-4 text-center">
-                  {{event.time}}
+                  {{eventItem.time}}
                 </p>
                 <p class="eventpost col-xs-4 text-center">
-                  {{event.date}}
+                  {{eventItem.date}}
                 </p>
                 <p class="eventpost col-xs-4 text-center">
-                  {{event.name}}
+                  {{eventItem.name}}
                 </p>
                 
                                  
@@ -49,10 +49,10 @@
                   
                   
                   
-                <button type="Submit" ng-click="event.signUp(event)" class="btn btn-info commentbtn text-center">Sign Up!</button>
-                  <div ng-repeat="volunteer in event.signUp" class="text-center signup">
-                    {{volunteer.event}}
-                  </div> 
+                <button type="button" ng-click="event.signUp(eventItem)" class="btn btn-info commentbtn text-center">Sign Up!</button>
+                  <!--<div ng-repeat="volunteer in event.signUp" class="text-center signup">-->
+                    {{event.Me.firstname}}{{event.Me.lastname}}
+                  <!--</div> -->
                   </div>
               </div>
             </div>

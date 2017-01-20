@@ -50,6 +50,19 @@ function eventsCtrl(Auth, $location, $http, Events) {
                     }
                 })
         }
+        event.signUp = function(eventItem){
+            console.log('RUNNING')
+            eventItem.volunteers = eventItem.volunteers || []
+            eventItem.volunteers.push(Auth.user._id)
+            $http
+                .post('/api/events/' + eventItem._id, eventItem)    
+                .then(function(returnData){
+                    console.log('Signed Up: ', returnData);
+                    if(returnData.data){
+                     console.log(returnData.data)
+                    }
+                })
+        }
         
         
         
@@ -73,9 +86,6 @@ function eventsCtrl(Auth, $location, $http, Events) {
     }
 
 
-    event.signUp = function () {
-        
-    }
-
+    
     
 }
