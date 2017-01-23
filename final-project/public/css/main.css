@@ -192,18 +192,18 @@ body{
 }
 .eventpost{
   color: #D6EBFF;
-  background-color: #4F617F;
+  background-color: transparent;
   display: inline;
   float: right;
 }
 
 .newevent {
   width: 75%;
-  background-color: #4F617F;
+  background-color: transparent;
   color: #16222A;
-  border: 1px solid #516395;
+  border-bottom: 5px solid #516395;
   margin: 2px auto;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   text-align: center;
 }
 
@@ -223,7 +223,7 @@ body{
 }
 
 .commentcontainer {
-  text-align: center
+  text-align: center;
 }
 
 .newComment {
@@ -251,6 +251,7 @@ body{
 }
 
 .volunteerStyle {
+  
   color: #D6EBFF;
   text-align: left;
 }
@@ -329,8 +330,10 @@ body{
 /*css for search page*/
 
 .searchList {
-  color: #D6EBFF;
+  color: #4F617F;
   font-size: 20px;
+  border: 5px solid #D6EBFF;
+  padding: 5px;
 }
 
 
@@ -340,7 +343,12 @@ body{
 .pad {
   padding-top: 5px;
 }
-
+.color {
+  color: #4F617F;
+}
+.bold {
+  font-weight: bold;
+}
 
 
 

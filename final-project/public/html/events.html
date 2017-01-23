@@ -29,7 +29,8 @@
                     <!--<button type="Submit" ng-click="event.removeEvent()" class="btn btn-info commentbtn">Delete Event</button>-->
                   </div>
                 </form>
-
+                <br>
+                
                 <div ng-repeat="eventItem in event.Events" class="newevent container text-center pad">
                   <div class="row">
                     <p class="eventpost col-xs-4 text-center">
@@ -51,13 +52,13 @@
 
 
 
-
+                    
                     <br>
                     <button type="button" ng-click="event.signUp(eventItem)" class="btn btn-info commentbtn">Sign Up!</button>
                     
                     <!--<div ng-repeat="volunteer in event.signUp" class="text-center signup">-->
                     <ul class="pad" ng-repeat="volunteer in eventItem.volunteers">
-                      <li class="volunteerStyle">Volunteer: {{volunteer.firstname}} {{volunteer.lastname}}</li>
+                      <li class="volunteerStyle"><b>Volunteer:</b> {{volunteer.firstname}} {{volunteer.lastname}}</li>
                       
                     </ul>
                   </div>
