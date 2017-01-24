@@ -346,6 +346,9 @@ body{
 .color {
   color: #4F617F;
 }
+.textSize {
+  font-size: 22px;
+}
 .bold {
   font-weight: bold;
 }

@@ -2,13 +2,13 @@
 <h1 class="heading text-center"><u>Current Church Members</u></h1>
 
 
-
-
-
+<div class="text-center">
+<label class="color textSize">Search: <input  ng-model="searchBar"></label>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <ul ng-repeat="user in search.users">
+            <ul ng-repeat="user in search.users | filter: searchBar">
                 <li class="searchList"><b>Name:</b> {{user.firstname}} {{user.lastname}} <br>
                     <b>Phone #:</b> {{user.phone}} <br>
                     <b>Address:</b> {{user.address}} <br>
